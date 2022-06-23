@@ -2,12 +2,14 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 
+
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-top',
+  templateUrl: './top.page.html',
+  styleUrls: ['./top.page.scss'],
 })
-export class HomePage {
+
+export class TopPage {
   tabfilms : any = [];
   titre: any = '';
   constructor(private http: HttpClient) {}
@@ -22,7 +24,7 @@ export class HomePage {
 
   ionViewWillEnter() {
 
-    this.http.get('https://api.themoviedb.org/3/movie/popular?api_key=019047668672587abc30843ac633a54c')
+    this.http.get('https://api.themoviedb.org/3/movie/top_rated?api_key=019047668672587abc30843ac633a54c&language=FR&page=1')
       .pipe(
         map(response => response['results'])
       )
