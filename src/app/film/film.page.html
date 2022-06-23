@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ tabfilms.original_title }}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container" >
+    <div class="toponefilm">
+      <img class="imgfilm" src="https://www.themoviedb.org/t/p/w500/{{ tabfilms.backdrop_path }} " alt="">
+      <div class="test">  <img  class="imgfilm2" src="https://www.themoviedb.org/t/p/w500/{{ tabfilms.poster_path }} " alt=""> </div>
+    </div>
+    <div class="botonefilm" >
+      
+      <div class="titre" >
+        <h1>{{ tabfilms.original_title }}</h1>
+      </div>
+
+      <div class="genre">
+        <div class="bulle" *ngFor="let genre of tabfilms.genres">{{ genre.name }}</div>
+      </div>
+
+      <div class="notesortie">
+        <p>{{tabfilms.release_date}}</p>
+        <div class="note">
+          <ion-icon name="star-sharp"></ion-icon>
+          <p>{{tabfilms.vote_average}}</p>
+        </div>
+      </div>
+
+      <div class="desc">
+        <p>{{tabfilms.overview}}</p>
+      </div>
+
+      <div>
+        <ion-row>
+          <ion-col size="6" *ngFor="let cast of tabcasts">
+            <ion-card class="taille">
+              <ion-card-header class="carte">
+                <img src="https://image.tmdb.org/t/p/w500//{{cast.profile_path}}"  alt=""><img *ngIf="cast.profile_path == null" src="http://via.placeholder.com/500x750"  alt="">
+              </ion-card-header>
+              <ion-card-content  class="taille">
+                <!-- <h1 class="text">{{tabfilm.original_title | slice:0:9}}<span *ngIf="tabfilm.original_title.length > 7">... </span></h1> -->
+                <div class="flex note">
+                  <p class="date">{{cast.name}}</p>
+                  <div class="flex center">
+                    <p></p>
+                  </div>
+                </div>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </div>
+
+    </div>
+</div>
+</ion-content>

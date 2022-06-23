@@ -13,8 +13,12 @@ const routes: Routes = [
         loadChildren: () => import('../home/home.module').then( m => m.HomePageModule)
       },
       {
-        path: 'settings',
+        path: 'top',
         loadChildren: () => import('../top/top.module').then( m => m.TopPageModule)
+      },
+      {
+        path: 'film',
+        loadChildren: () => import('../film/film.module').then( m => m.FilmPageModule)
       }
     ]
   }

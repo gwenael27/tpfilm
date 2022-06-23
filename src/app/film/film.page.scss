@@ -1,0 +1,119 @@
+.toponefilm{
+    width: 100%;
+    height: 30%;
+}
+
+.container{
+    position: relative;
+}
+
+.imgfilm{
+    width: 100%;
+
+}
+
+.imgfilm2{
+    width: 100%;
+    height: 100%;
+}
+
+.botonefilm{
+    height: 100vh;
+    width: 100%;
+    top: -230px;
+}
+
+.test{
+    width: 95px;
+    height: 135px;
+    background-color: aqua;
+    position: absolute;
+    top: 20px;
+    margin-left: 110px;
+    border: solid 2px white;
+}
+
+.titre{
+    text-align: center;
+}
+
+.genre{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 15px;
+    flex-wrap: wrap;
+}
+
+.bulle{
+    background-color: dodgerblue;
+    padding: 8px;
+    border-radius: 50px;
+    font-size: 15px;
+}
+
+.notesortie{
+  display: flex;  
+  justify-content: space-between;
+  margin: 25px ;
+}
+
+.notesortie > p {
+    margin: 0px;
+}
+
+.note{
+    display: flex;
+}
+
+.note > p {
+    margin: 0px;
+}
+
+.desc{
+    display: flex;
+    text-align: center;
+}
+
+.carte{
+  padding: 0;
+}
+
+.text{
+  font-size: 17px;
+  margin-top: 13px;
+  margin-left: -6px;
+}
+
+.flex{
+  display: flex;
+}
+
+.taille{
+width: 100%;
+height: 100%;
+margin: 0px;
+}
+
+.center{
+  align-items: center;
+}
+
+.top{
+  margin-top: -5px;
+}
+
+.date{
+  text-align: center;
+  font-size: 12px;
+ margin-top: 1px;
+}
+
+.note{
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-left: -6px;
+}
+
+h1{
+    margin: 0;
+}

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-home',
@@ -10,15 +11,13 @@ import { map } from 'rxjs/operators';
 export class HomePage {
   tabfilms : any = [];
   titre: any = '';
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
 
-  calc(){
-    if(this.titre.length == 6){
-      this.titre = 'zeubi'
-    }
-
+  navToFilm(tabfilm){
+    this.router.navigate(['/film'],{state: { test: tabfilm }})
   }
+
 
   ionViewWillEnter() {
 
@@ -29,8 +28,6 @@ export class HomePage {
       .subscribe(films => {
         this.tabfilms = films
         this.titre = this.tabfilms[0].original_title;
-
-        console.log(this.tabfilms[0]);
       });
   }
 
